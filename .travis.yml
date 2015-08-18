@@ -1,12 +1,17 @@
 language: node_js
-
 node_js:
-  - "0.10"
-  - "0.12"
-  - iojs
-
+- '0.10'
+- '0.12'
+- iojs
 script:
-  - npm test
-
+- npm test
 after_script:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+- cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+deploy:
+  provider: npm
+  email: dev@adrianhaasler.com
+  api_key:
+    secure: cN9S5CZkgtzt/lYer8PO1Jt5onsqKPNhsRb4odjJdbsIH7FGOmxvUx2BQWYMJTtQIWwYZlHbKOWxz0n/X3SVvsi6sP5BV3QM2Foko/y65XrfdR9bWEjc9TpFL8D4VN7g0QZIqqDt87ygf4rnUswlCOJDisIT+2GdjP3CV/VULYNPanC+8YHWJfYcNsN3zUSjH/Vx5C9FMECbedBcjfavbvnofEBliI8C+Lg6qRbcJi1TjU+quROaeeCWWRxX5xie7ZgRhQKgchJHQ9bD9E5GZz9wD5foNym95amentKIeinqbjxGYkaqyud94arwTPDwENIWOXb1lO8LuKMs2rV/joNof33wzv1H1sWtpAT1dPoPDXEOVdAoyu0sJ7KhloGnVsr8loE1Za4tO3jyQfeVJhG/CkGGzjfj1SzD+ivU9A4NQqm6mNKS40gSaBHdwY+LTEKIoAmFst/3+WxvejK74nxddAa6AUceIGsnKSrDb4EfugtvenFmCM8N4dd0nEaeZevSpZMq5+CZ9/3O1kLZrLXhNJLz4T4GHGC0Eaq/fkyCncPkencPFcR4owIk6gK4QGa8aYvZFnEtpLS3KsGiSRgBNrSEJ83L0j35xPV9kJFqYBvD/evyu6toRLNwsBbGx9nCgVfmcvbZbOMrT3v9qsv3mXWMg9PM4/hXj3v22ok=
+  on:
+    tags: true
+    repo: ahaasler/hexo-generator-multilingual-archive
