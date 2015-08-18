@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/ahaasler/hexo-generator-multilingual-archive.svg?branch=master)](https://travis-ci.org/ahaasler/hexo-generator-multilingual-archive)
 [![NPM version](https://badge.fury.io/js/hexo-generator-multilingual-archive.svg)](http://badge.fury.io/js/hexo-generator-multilingual-archive)
 [![Coverage Status](https://coveralls.io/repos/ahaasler/hexo-generator-multilingual-archive/badge.svg?branch=master&service=github)](https://coveralls.io/github/ahaasler/hexo-generator-multilingual-archive?branch=master)
+[![Dependency Status](https://gemnasium.com/ahaasler/hexo-generator-multilingual-archive.svg)](https://gemnasium.com/ahaasler/hexo-generator-multilingual-archive)
 
 Multilingual archive generator for [Hexo].
 
