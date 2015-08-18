@@ -1,7 +1,7 @@
 {
-  "name": "hexo-generator-archive",
+  "name": "hexo-generator-multilingual-archive",
   "version": "0.1.3",
-  "description": "Archive generator for Hexo.",
+  "description": "Multilingual archive generator for Hexo.",
   "main": "index",
   "scripts": {
     "test": "gulp test"
@@ -12,15 +12,25 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "repository": "hexojs/hexo-generator-archive",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahaasler/hexo-generator-multilingual-archive"
+  },
   "homepage": "http://hexo.io/",
   "keywords": [
     "hexo",
     "generator",
+    "multilingual",
     "archive"
   ],
-  "author": "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)",
+  "author": "Adrian Haasler García <dev@adrianhaasler.com> (http://www.adrianhaasler.com)",
+  "contributors": [
+    "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)"
+  ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahaasler/hexo-generator-multilingual-archive/issues"
+  },
   "devDependencies": {
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",

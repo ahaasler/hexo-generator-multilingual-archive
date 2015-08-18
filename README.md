@@ -1,13 +1,15 @@
-# hexo-generator-archive
+# hexo-generator-multilingual-archive
 
-[![Build Status](https://travis-ci.org/hexojs/hexo-generator-archive.svg?branch=master)](https://travis-ci.org/hexojs/hexo-generator-archive)  [![NPM version](https://badge.fury.io/js/hexo-generator-archive.svg)](http://badge.fury.io/js/hexo-generator-archive) [![Coverage Status](https://img.shields.io/coveralls/hexojs/hexo-generator-archive.svg)](https://coveralls.io/r/hexojs/hexo-generator-archive?branch=master)
+[![Build Status](https://travis-ci.org/ahaasler/hexo-generator-multilingual-archive.svg?branch=master)](https://travis-ci.org/ahaasler/hexo-generator-multilingual-archive)
+[![NPM version](https://badge.fury.io/js/hexo-generator-multilingual-archive.svg)](http://badge.fury.io/js/hexo-generator-multilingual-archive)
+[![Coverage Status](https://img.shields.io/coveralls/ahaasler/hexo-generator-multilingual-archive.svg)](https://coveralls.io/r/ahaasler/hexo-generator-multilingual-archive?branch=master)
 
-Archive generator for [Hexo].
+Multilingual archive generator for [Hexo].
 
 ## Installation
 
 ``` bash
-$ npm install hexo-generator-archive --save
+$ npm install hexo-generator-multilingual-archive --save
 ```
 
 ## Options
