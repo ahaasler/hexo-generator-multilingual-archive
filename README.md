@@ -4,7 +4,7 @@
 [![NPM version](https://badge.fury.io/js/hexo-generator-multilingual-archive.svg)](http://badge.fury.io/js/hexo-generator-multilingual-archive)
 [![Coverage Status](https://coveralls.io/repos/ahaasler/hexo-generator-multilingual-archive/badge.svg?branch=master&service=github)](https://coveralls.io/github/ahaasler/hexo-generator-multilingual-archive?branch=master)
 [![Dependency Status](https://gemnasium.com/ahaasler/hexo-generator-multilingual-archive.svg)](https://gemnasium.com/ahaasler/hexo-generator-multilingual-archive)
-[![License](https://img.shields.io/github/license/ahaasler/hexo-generator-multilingual-archive.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](LICENSE)
 
 Multilingual archive generator for [Hexo].
 
