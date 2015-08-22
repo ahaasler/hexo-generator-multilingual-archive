@@ -4,7 +4,8 @@
   "description": "Multilingual archive generator for Hexo.",
   "main": "index",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "preversion": "npm test"
   },
   "directories": {
     "lib": "./lib"
