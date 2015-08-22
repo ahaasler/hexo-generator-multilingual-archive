@@ -25,9 +25,11 @@
     "archive"
   ],
   "author": "Adrian Haasler García <dev@adrianhaasler.com> (http://www.adrianhaasler.com)",
-  "contributors": [
-    "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)"
-  ],
+  "contributors": [{
+    "name": "Tommy Chen",
+    "email": "tommy351@gmail.com",
+    "url": "http://zespia.tw"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ahaasler/hexo-generator-multilingual-archive/issues"
