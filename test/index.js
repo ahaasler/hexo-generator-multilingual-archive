@@ -521,4 +521,366 @@ describe('Archive generator', function() {
       }
     };
   });
+
+  it('complete alternates', function() {
+    hexo.config.archive_generator = {
+      per_page: 0,
+      yearly: true,
+      monthly: true
+    };
+
+    var result = generator(locals);
+
+    result.length.should.eql(12);
+
+    // English
+
+    result[0].path.should.eql('en/archives/');
+    result[0].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[1].path.should.eql('en/archives/2013/');
+    result[1].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/',
+      title: 'Hexo'
+    }]);
+
+    result[2].path.should.eql('en/archives/2013/06/');
+    result[2].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/06/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/06/',
+      title: 'Hexo'
+    }]);
+
+    result[3].path.should.eql('en/archives/2013/10/');
+    result[3].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/10/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/10/',
+      title: 'Hexo'
+    }]);
+
+    result[4].path.should.eql('en/archives/2014/');
+    result[4].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2014/',
+      title: 'Hexo'
+    }]);
+
+    result[5].path.should.eql('en/archives/2014/02/');
+    result[5].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/02/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2014/02/',
+      title: 'Hexo'
+    }]);
+
+    // Español
+
+    result[6].path.should.eql('es/archivo/');
+    result[6].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[7].path.should.eql('es/archivo/2013/');
+    result[7].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/',
+      title: 'Hexo'
+    }]);
+
+    result[8].path.should.eql('es/archivo/2013/06/');
+    result[8].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/06/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/06/',
+      title: 'Hexo'
+    }]);
+
+    result[9].path.should.eql('es/archivo/2013/10/');
+    result[9].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/10/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/10/',
+      title: 'Hexo'
+    }]);
+
+    result[10].path.should.eql('es/archivo/2014/');
+    result[10].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2014/',
+      title: 'Hexo'
+    }]);
+
+    result[11].path.should.eql('es/archivo/2014/02/');
+    result[11].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/02/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2014/02/',
+      title: 'Hexo'
+    }]);
+  });
+
+  it('no montly alternates', function() {
+    hexo.config.archive_generator = {
+      per_page: 0,
+      yearly: true,
+      monthly: true
+    };
+    hexo.locals.cache.data.config_es.archive_generator = {
+      monthly: false
+    };
+
+    var result = generator(hexo.locals.toObject());
+
+    result.length.should.eql(9);
+
+    // English
+
+    result[0].path.should.eql('en/archives/');
+    result[0].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[1].path.should.eql('en/archives/2013/');
+    result[1].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/',
+      title: 'Hexo'
+    }]);
+
+    result[2].path.should.eql('en/archives/2013/06/');
+    result[2].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/06/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/',
+      title: 'Hexo'
+    }]);
+
+    result[3].path.should.eql('en/archives/2013/10/');
+    result[3].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/10/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/',
+      title: 'Hexo'
+    }]);
+
+    result[4].path.should.eql('en/archives/2014/');
+    result[4].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2014/',
+      title: 'Hexo'
+    }]);
+
+    result[5].path.should.eql('en/archives/2014/02/');
+    result[5].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/02/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2014/',
+      title: 'Hexo'
+    }]);
+
+    // Español
+
+    result[6].path.should.eql('es/archivo/');
+    result[6].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[7].path.should.eql('es/archivo/2013/');
+    result[7].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2013/',
+      title: 'Hexo'
+    }]);
+
+    result[8].path.should.eql('es/archivo/2014/');
+    result[8].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/2014/',
+      title: 'Hexo'
+    }]);
+  });
+
+  it('no yearly alternates', function() {
+    hexo.config.archive_generator = {
+      per_page: 0,
+      yearly: true,
+      monthly: true
+    };
+    hexo.locals.cache.data.config_es.archive_generator = {
+      yearly: false
+    };
+
+    var result = generator(hexo.locals.toObject());
+
+    result.length.should.eql(7);
+
+    // English
+
+    result[0].path.should.eql('en/archives/');
+    result[0].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[1].path.should.eql('en/archives/2013/');
+    result[1].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[2].path.should.eql('en/archives/2013/06/');
+    result[2].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/06/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[3].path.should.eql('en/archives/2013/10/');
+    result[3].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2013/10/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[4].path.should.eql('en/archives/2014/');
+    result[4].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    result[5].path.should.eql('en/archives/2014/02/');
+    result[5].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/2014/02/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+
+    // Español
+
+    result[6].path.should.eql('es/archivo/');
+    result[6].data.alternates.should.eql([{
+      lang: 'en',
+      path: 'en/archives/',
+      title: 'Hexo'
+    }, {
+      lang: 'es',
+      path: 'es/archivo/',
+      title: 'Hexo'
+    }]);
+  });
 });
