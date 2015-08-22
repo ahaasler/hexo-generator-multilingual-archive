@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-multilingual-archive",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Multilingual archive generator for Hexo.",
   "main": "index",
   "scripts": {
@@ -25,11 +25,13 @@
     "archive"
   ],
   "author": "Adrian Haasler García <dev@adrianhaasler.com> (http://www.adrianhaasler.com)",
-  "contributors": [{
-    "name": "Tommy Chen",
-    "email": "tommy351@gmail.com",
-    "url": "http://zespia.tw"
-  }],
+  "contributors": [
+    {
+      "name": "Tommy Chen",
+      "email": "tommy351@gmail.com",
+      "url": "http://zespia.tw"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ahaasler/hexo-generator-multilingual-archive/issues"
