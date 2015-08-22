@@ -23,9 +23,27 @@ archive_generator:
   monthly: true
 ```
 
-- **per_page**: Posts displayed per page. (0 = disable pagination)
+- **per\_page**: Posts displayed per page. (0 = disable pagination)
 - **yearly**: Generate yearly archive.
 - **monthly**: Generate monthly archive.
+
+### Default configuration is:
+
+- **per\_page**: the configured per\_page (outside archive\_generator) or 10.
+- **yearly**: true.
+- **monthly**: true.
+
+### Localizable configuration
+
+These are the values that this generator uses and can be [localized](https://github.com/ahaasler/hexo-multilingual#_c-configuration-locales "Configuring locales"):
+
+- archive_generator
+  - per_page
+  - yearly
+  - monthly
+- archive_dir
+- pagination_dir
+- title
 
 ## License
 
