@@ -1,6 +1,7 @@
 language: node_js
 node_js:
 - '0.10'
+- '0.11'
 - '0.12'
 - iojs
 script:
@@ -15,3 +16,4 @@ deploy:
   on:
     tags: true
     repo: ahaasler/hexo-generator-multilingual-archive
+    node: '0.12'
