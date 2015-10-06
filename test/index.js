@@ -14,8 +14,6 @@ describe('Archive generator', function() {
   var esPosts;
   var locals;
 
-  console.log(hexo.locals);
-
   before(function() {
     hexo.config.language = ['en', 'es', 'default'];
     hexo.locals.cache.data = {
