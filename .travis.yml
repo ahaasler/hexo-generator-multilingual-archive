@@ -8,6 +8,7 @@ script:
 - npm test
 after_script:
 - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+- codeclimate-test-reporter < ./coverage/lcov.info
 deploy:
   provider: npm
   email: dev@adrianhaasler.com
@@ -17,3 +18,7 @@ deploy:
     tags: true
     repo: ahaasler/hexo-generator-multilingual-archive
     node: '0.12'
+addons:
+  code_climate:
+    repo_token:
+      secure: EsnqetlEik88+IfH4FbfwHAdeUlUQNkipglEdm6yFMEI91bvq/AEof/IH8OsM8QVTpmS+ygEMqQWoTjEd7dgg+t+ffr07jOJfURsL6e0kj9w0B3hUxox6Z5MPlWCX4rNCstYgzZ23ClPW2aPkxwCBC0RfYCeN7QnXaHkBYetX+8HNeX6FISBKc64h7r1PmgMAKKl1HMKQrQEXEkmEjcjKmovlhXuMp3sjQLvIj8TxAfplAOvP+SCSwHYBjwF9TJUtdCo2ibNAus+vsDT94JBPQu5vX/MMkLyWR1J0cFrE9QPxkJzA/em8+xOmhpcbJzyTHo8kX2yw5PWMGdzdGUGE/xiah0EEuE6Xs8iN9jgcB3jHHzhiWS7per1PH3l8CtZkR1r5WHHvHVbbG6zOpwEhynDsvn5AV98NIIO+ozWkNyDjHmrwp/hH6cDZKji5MjeVHRhs1/9fXaxoai5wTNj957NBX28PrkYfTahE5fCLACfLmztkM9p8I/F5sh9cojEKS425HEZimdsxK9Mfyjo8zpaJzWNKQ1IXPOWvz2tySp7oir3mC38RWW0dFNASi4+Y+rU7QQ4Tzs2gpv5/gKVEWt1K4AqodywyxD5ejxT/bqlIOZOmfNd3opPQga4AumTT+uatdSy3eeuA8A3K2DlTeMvXIgwx9jvsPgaegjCTnI=
