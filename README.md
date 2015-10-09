@@ -47,6 +47,9 @@ These are the values that this generator uses and can be [localized](https://git
 
 ## License
 
-MIT
+This module is released under the [MIT License](http://opensource.org/licenses/MIT "The MIT License").
+
+See [LICENSE](LICENSE "The MIT License").
 
 [Hexo]: http://hexo.io/
+
